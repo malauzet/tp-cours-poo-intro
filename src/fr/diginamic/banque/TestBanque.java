@@ -1,15 +1,19 @@
 package fr.diginamic.banque;
 
 import fr.diginamic.banque.entites.Compte;
+import fr.diginamic.banque.entites.CompteTaux;
 
 public class TestBanque {
     public static void main(String[] args) {
 
-        Compte compte1 = new Compte(1, 999.99);
-        Compte compte2 = new Compte(2, 1002.57);
+        Compte[] comptes = new Compte[2];
 
-        System.out.println(compte1);
-        System.out.println();
-        System.out.println(compte2);
+        comptes[0] = new Compte(1, 999.99);
+        comptes[1] = new CompteTaux(2, 1002.57, 2.1);
+
+        for (Compte compte : comptes) {
+            System.out.println(compte);
+            System.out.println();
+        }
     }
 }

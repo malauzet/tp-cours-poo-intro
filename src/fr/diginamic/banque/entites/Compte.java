@@ -31,6 +31,6 @@ public class Compte {
 
     @Override
     public String toString() {
-        return "Numéro de Compte : " + numCompte + "\nSolde : " + soldeCompte;
+        return "Numéro de Compte : " + numCompte + "\nSolde : " + soldeCompte + "€";
     }
 }
