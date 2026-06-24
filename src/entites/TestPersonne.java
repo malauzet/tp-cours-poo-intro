@@ -11,9 +11,15 @@ public class TestPersonne {
                 20, "Route de Nîmes", 34170, "Castelnau-le-lez");
 
         Personne personne1 = new Personne("Alauzet", "Marius");
-        Personne personne2 = new Personne("Alauzet", "Tristan", ad2);
+        personne1.setAddressPostale(ad1);
 
-        System.out.println(personne1);
-        System.out.println(personne2);
+        Personne personne2 = new Personne("Alauzet", "Tristan");
+        personne2.setAddressPostale(ad2);
+
+        //System.out.println(personne1);
+        //System.out.println(personne2);
+
+        personne1.afficherIdentite();
+        personne2.afficherIdentite();
     }
 }
