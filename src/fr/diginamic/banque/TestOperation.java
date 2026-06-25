@@ -4,6 +4,8 @@ import fr.diginamic.banque.entites.Credit;
 import fr.diginamic.banque.entites.Debit;
 import fr.diginamic.banque.entites.Operation;
 
+import java.util.Objects;
+
 public class TestOperation {
     public static void main(String[] args) {
 
@@ -28,9 +30,9 @@ public class TestOperation {
         double montantGlobal = 0;
 
         for (Operation op : operations) {
-            if (op.getType() == "CREDIT") {
+            if (Objects.equals(op.getType(), "CREDIT")) {
                 montantGlobal += op.getMontantOperation();
-            } else if (op.getType() == "DEBIT") {
+            } else if (Objects.equals(op.getType(), "DEBIT")) {
                 montantGlobal -= op.getMontantOperation();
             }
         }
