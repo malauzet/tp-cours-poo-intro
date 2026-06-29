@@ -33,9 +33,4 @@ public class Pays {
         if (!(o instanceof Pays pays)) return false;
         return getPopulation() == pays.getPopulation() && Objects.equals(getNom(), pays.getNom());
     }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getNom(), getPopulation());
-    }
 }
