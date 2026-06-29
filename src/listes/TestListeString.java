@@ -1,6 +1,7 @@
 package listes;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class TestListeString {
     static void main() {
@@ -31,11 +32,14 @@ public class TestListeString {
         }
         System.out.println("La liste en majuscules : " + liste);
 
-        for (int i = 0; i < liste.size(); i++) {
-            if (liste.get(i).startsWith("N")) {
-                liste.remove(liste.get(i));
+        Iterator<String> it = liste.iterator();
+
+        while (it.hasNext()) {
+            String ville = it.next();
+            if (ville.toLowerCase().startsWith("n")) {
+                it.remove();
             }
         }
-        System.out.println("Liste sans les villes commencent par 'N' : " + liste);
+        System.out.println("Liste sans les villes commençant par 'N' : " + liste);
     }
 }
