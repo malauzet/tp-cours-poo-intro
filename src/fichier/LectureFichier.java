@@ -1,6 +1,7 @@
 package fichier;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -52,7 +53,7 @@ public class LectureFichier {
         }
 
         Path sortie = Paths.get("villes_25000.csv");
-        Files.write(sortie, lignesSortie);
+        Files.write(sortie, lignesSortie, StandardCharsets.UTF_8);
 
         System.out.println("Fichier généré : " + (lignesSortie.size() - 1) + " villes de plus de 25 000 habitants.");
     }
