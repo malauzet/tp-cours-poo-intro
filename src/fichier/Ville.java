@@ -1,6 +1,6 @@
 package fichier;
 
-public class Ville {
+public class Ville implements Comparable<Ville> {
 
     private final String nom;
     private final String codeDep;
@@ -33,5 +33,11 @@ public class Ville {
     @Override
     public String toString() {
         return nom + ", " + codeDep + ", " + nomRegion + ", " + population;
+    }
+
+    @Override
+    public int compareTo(Ville autre) {
+        //return this.nom.compareTo(autre.nom);
+        return Integer.compare(this.population, autre.population);
     }
 }

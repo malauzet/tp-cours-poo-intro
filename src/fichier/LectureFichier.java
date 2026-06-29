@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LectureFichier {
@@ -39,6 +40,10 @@ public class LectureFichier {
         }
         System.out.println("Nombre de villes chargées : " + listeVilles.size());*/
 
+        listeVilles.removeIf(v -> v.getPopulation() <= 25000);
+        Collections.sort(listeVilles);
+        Collections.reverse(listeVilles);
+
         List<String> lignesSortie = new ArrayList<>();
         lignesSortie.add("Nom;Code département;Nom de la région;Population Totale");
 
@@ -52,7 +57,7 @@ public class LectureFichier {
             }
         }
 
-        Path sortie = Paths.get("villes_25000.csv");
+        Path sortie = Paths.get("villes_25000_tri.csv");
         Files.write(sortie, lignesSortie, StandardCharsets.UTF_8);
 
         System.out.println("Fichier généré : " + (lignesSortie.size() - 1) + " villes de plus de 25 000 habitants.");
