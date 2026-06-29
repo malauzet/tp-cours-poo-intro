@@ -27,13 +27,14 @@ public class TestListeString {
         }
         System.out.println("Le nom de ville le plus long de la liste est : " + maxS);
 
+        // Peut être remplacé par replaceAll()
         for (int i = 0; i < liste.size(); i++) {
             liste.set(i, liste.get(i).toUpperCase());
         }
         System.out.println("La liste en majuscules : " + liste);
 
+        // Peut être remplacé par removeIf()
         Iterator<String> it = liste.iterator();
-
         while (it.hasNext()) {
             String ville = it.next();
             if (ville.toLowerCase().startsWith("n")) {
