@@ -2,10 +2,10 @@ package fichier;
 
 public class Ville {
 
-    private String nom;
-    private String codeDep;
-    private String nomRegion;
-    private int population;
+    private final String nom;
+    private final String codeDep;
+    private final String nomRegion;
+    private final int population;
 
     public Ville(String nom, String codeDep, String nomRegion, int population) {
         this.nom = nom;

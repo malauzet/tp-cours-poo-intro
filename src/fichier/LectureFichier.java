@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LectureFichier {
-    public static void main(String[] args) throws IOException {
+    static void main() throws IOException {
 
         ArrayList<Ville> listeVilles = new ArrayList<>();
 
