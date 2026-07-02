@@ -16,7 +16,7 @@ public class TestContinentAvecEnum {
         liste.add(new Ville("Dakar", 1_278_000, Continent.AFRIQUE));
 
         for  (Ville v : liste) {
-            IO.println(v.toStringContinent());
+            IO.println(v.toString());
         }
     }
 }

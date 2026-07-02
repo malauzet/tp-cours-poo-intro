@@ -39,10 +39,10 @@ public class Ville {
 
     @Override
     public String toString() {
-        return "{" + nom + ", " + nbHabitants + "}";
-    }
 
-    public String toStringContinent() {
-        return "{" + nom + ", " + nbHabitants + ", " + continent.getLibelle() + "}";
+        if (continent != null) {
+            return "{" + nom + ", " + nbHabitants + ", " + continent.getLibelle() + "}";
+        }
+        return "{" + nom + ", " + nbHabitants + "}";
     }
 }
